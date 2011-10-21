@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<system xmlns="http://www.eiffel.com/developers/xml/configuration-1-5-0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.eiffel.com/developers/xml/configuration-1-5-0 http://www.eiffel.com/developers/xml/configuration-1-5-0.xsd" name="dnc2" uuid="70E20BE8-91FE-49FE-ABD2-10D2A0553050">
+	<target name="dnc2">
+		<root class="APPLICATION" feature="make"/>
+		<option warning="true">
+			<assertions precondition="true" postcondition="true" check="true" invariant="true" loop="true" supplier_precondition="true"/>
+		</option>
+		<precompile name="base_pre" location="$ISE_PRECOMP\base-mt.ecf"/>
+		<library name="base" location="$ISE_LIBRARY\library\base\base.ecf"/>
+		<cluster name="dnc2" location=".\" recursive="true">
+			<file_rule>
+				<exclude>/EIFGENs$</exclude>
+				<exclude>/.svn$</exclude>
+				<exclude>/CVS$</exclude>
+			</file_rule>
+			<file_rule>
+				<exclude>^/library$</exclude>
+			</file_rule>
+			<cluster name="library" location="c:\documents and settings\dominik gabi\my documents\eiffel 6.4 user files\projects\dnc2\library\"/>
+			<cluster name="examples" location="c:\documents and settings\dominik gabi\my documents\eiffel 6.4 user files\projects\dnc2\examples\"/>
+		</cluster>
+	</target>
+	<target name="dnc2_dotnet" extends="dnc2">
+		<setting name="msil_generation" value="true"/>
+	</target>
+</system>
